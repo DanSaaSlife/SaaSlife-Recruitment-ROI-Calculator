@@ -1,8 +1,14 @@
+function updateHoursSaved() {
+    // Update the displayed value as the slider is moved
+    const hoursSaved = document.getElementById('hoursSavedSlider').value;
+    document.getElementById('hoursSavedValue').textContent = hoursSaved;
+}
+
 function calculateROI() {
     // Get the input values
     const hoursSpent = document.getElementById('hoursSpent').value;
     const hourlyRate = document.getElementById('hourlyRate').value;
-    const hoursSaved = document.getElementById('hoursSaved').value;
+    const hoursSaved = document.getElementById('hoursSavedSlider').value;
 
     // Calculate the ROI
     const timeValueSaved = hoursSaved * hourlyRate;
