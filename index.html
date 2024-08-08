@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruitment ROI Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Recruitment ROI Calculator</h1>
+        <form id="roiForm">
+            <label for="hoursSpent">How many hours do you spend sourcing and/or qualifying candidates?</label><br>
+            <input type="number" id="hoursSpent" name="hoursSpent" required><br><br>
+
+            <label for="hourlyRate">How much is your time worth per hour?</label><br>
+            <input type="number" id="hourlyRate" name="hourlyRate" required><br><br>
+
+            <label for="hoursSaved">How many hours are saved with SaaSlife?</label><br>
+            <input type="number" id="hoursSaved" name="hoursSaved" required><br><br>
+
+            <input type="button" value="Calculate ROI" onclick="calculateROI()">
+        </form>
+
+        <div id="result" class="hidden">
+            <h2>Your Hiring ROI with SaaSlife</h2>
+            <p><strong>Hours saved monthly:</strong> <span id="resultHoursSaved"></span> hours</p>
+            <p><strong>Time value saved by SaaSlife:</strong> $<span id="resultTimeValueSaved"></span></p>
+            <p><strong>Total monthly ROI:</strong> $<span id="resultTotalMonthlyROI"></span></p>
+            <p><strong>Upfront cost from SaaSlife:</strong> $0</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
