@@ -16,8 +16,9 @@
             <label for="hourlyRate">How much is your time worth per hour?</label><br>
             <input type="number" id="hourlyRate" name="hourlyRate" required><br><br>
 
-            <label for="hoursSaved">How many hours are saved with SaaSlife?</label><br>
-            <input type="number" id="hoursSaved" name="hoursSaved" required><br><br>
+            <label for="hoursSaved">Use the slider to select how many hours are saved with SaaSlife:</label><br>
+            <input type="range" id="hoursSavedSlider" name="hoursSaved" min="0" max="100" value="0" oninput="updateHoursSaved()" /><br>
+            <span id="hoursSavedValue">0</span> hours saved<br><br>
 
             <input type="button" value="Calculate ROI" onclick="calculateROI()">
         </form>
